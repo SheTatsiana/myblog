@@ -3,5 +3,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('blog_app.urls')),  # Включение URL-шаблонов вашего приложения myapp
+    path('', include('blog_app.urls')),  
 ]

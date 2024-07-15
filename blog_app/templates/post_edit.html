@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New/Edit Post</title>
+</head>
+<body>
+    <h1>{% if form.instance.id %}Edit{% else %}New{% endif %} Post</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+    <p><a href="{% url 'home' %}">Back to home</a></p>
+</body>
+</html>
+
